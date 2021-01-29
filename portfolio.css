@@ -1,0 +1,25 @@
+@charset "utf-8";
+@font-face{
+    font-family: "Summertime Lovin";
+    src: url("Summertime_Lovin.otf");
+}
+
+@keyframes anime{
+        from{ transform : translateY(-10px); }
+ 
+        50%{ transform : translateY(20px); }
+  
+        to{ transform : translateY(-10px); }
+    }
+
+.about_img, .profile_p_wrapper, .works_item{
+    opacity: 0;
+    transition: 0.7s;
+    transform: translateY(-50px);
+}
+
+#skill_icon_wrapper, #skill_p{
+    opacity: 0;
+    transition: 0.7s;
+    transform: translate(-50%, -50px);
+}
