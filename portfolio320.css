@@ -1,0 +1,751 @@
+
+@media screen and (max-width: 559px){
+    *{
+        margin: 0px;
+        font-family: sans-serif;
+    }
+    
+    body{
+        margin:0px;
+    }
+    
+    #background{
+        height: 100vh;
+        width: 100vw;
+        background-color: #efefef;
+        background-image:
+            linear-gradient(90deg, transparent 79px, #a1e6a1 79px, #a1e6a1 81px, transparent 81px),
+            linear-gradient(#dedede .1em, transparent .1em);
+        background-size: 100% 1.2em;
+        position: fixed;
+        opacity: 0.5;
+    }
+    
+    nav, nav * :not(.nav_main){
+        transition: all 0.3s;
+    }
+    
+    nav{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 48;
+        opacity: 0;
+    }
+    
+    .logo{
+        position: absolute;
+        left: 12%;
+    }
+    
+    .nav_main{
+        position: fixed;
+        width: 300px;
+        top: -15px;
+        right: -300px;
+        background-color: #fafafa;
+        height: 100vh;
+        padding: 60px 0 0 0;
+        list-style: none;
+        z-index: 50;
+    }
+    
+    .menu{
+        text-decoration: none;
+        color: #000;
+        padding: 18px 0px 18px 30px;
+        display: block;
+    }
+    
+    .menu:hover{
+        background: rgba(0,0,0,0.1);
+    }
+    
+    #menu_slide_overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: 49;
+        transition: 0s;
+        display: none;
+    }
+    
+    .logo_a{
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        font-family: Summertime Lovin;
+        font-size: 20px;
+    }
+    
+    #mobile_menu_btn{
+        position: absolute;
+        width: 45px;
+        height: 50px;
+        right: 15%;
+        cursor: pointer;
+    }
+    
+    .bar,.bar::before,.bar::after{
+        background-color: #fff;
+        display: block;
+        width:35px;
+        height: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        border-radius: 5px;
+    }
+    
+    .bar::before,.bar::after{
+        content:"";
+    }
+    
+    .bar::before{
+        top: -15px;
+    }
+    
+    .bar::after{
+        bottom: -15px;
+    }
+    
+    /*スクロール時のナビゲーションクラス*/
+    
+    .nav_sc{
+        height: 50px;
+        background: rgba(0,0,0,0.8);
+    }
+    
+    .logo_sc{
+        left: 12%;
+    }
+    
+    .logo_a_sc{
+        color: #a1e6a1;
+        font-size: 20px;
+    }
+    
+    .bar_sc,.bar_sc::before,.bar_sc::after{
+        background-color: #a1e6a1;
+        display: block;
+        width:35px;
+        height: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+    .bar_sc::before,.bar_sc::after{
+        content:"";
+    }
+    
+    .bar_sc::before{
+        top: -15px;
+    }
+    
+    .bar_sc::after{
+        bottom: -15px;
+    }
+    
+    /*ここまで*/
+    
+    header{
+        height: 100vh;
+        background-color: #a1e6a1;
+        text-align: center;
+        position: relative;
+    }
+    
+    #title{
+        font-size: 9.5vw;
+        position: relative;
+        top: 35vh;
+        color: rgba(255,255,255,1);
+        letter-spacing: 2px;
+        text-shadow: 5px 5px 0 #ccc, 10px 10px 0 #999;
+    }
+    
+    #subtitle{
+        font-size: 4vw;
+        position: relative;
+        top: 30vh;
+        color: rgba(255,255,255,0.9);
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 1px #aaa;
+    }
+    
+    .arrow1{
+        position: relative;
+        top: 45vh;
+        left: calc(50% - 45px);
+        width: 100px;
+        height: 100px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .arrow1:hover{
+        background: rgba(255,255,255,0.7);
+    }
+    
+    .arrow1::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border: solid 25px transparent;
+        border-top: solid 35px #fff;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,0);
+        margin-top: -8px;
+    }
+    
+    .swing{
+        animation-name: anime;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        transform : translateY(-20px);
+    }
+    
+    .fadeIn{
+        opacity : 0;
+        transform: translateY(-20px);
+        transition: all 1s;
+    }
+    
+    #about{
+        height: 1830px;
+        position: relative;
+    }
+    
+    .heading_wrapper{
+        position: relative;
+        width: 300px;
+        margin: 0;
+        top: 110px;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+    }
+    
+    .heading{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .heading_p{
+        width: 300px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .about_wrapper{
+        position: relative;
+        top: 120px;
+        width: 100%;
+        height: 1610px;
+        /*background: rgba(0,0,0,0.2);*/
+    }
+    
+    #profile_wrapper{
+        /*background: rgba(0,0,0,0.1);*/
+        width: 250px;
+        height: 860px;
+        position: relative;
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%,0%);
+    }
+    
+    .sub_heading{
+        padding-top: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+    .sub_heading::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: -95px;
+        width: 300px;
+        border-bottom: solid 3px #a1e6a1; 
+    }
+    
+    .skill_sub_heading::after{
+        left: -110px;
+    }
+    
+    .about_img{
+        background: rgba(0,0,0,0.3);
+        height: 250px;
+        width: 250px;
+        border-radius: 125px;
+        position: absolute;
+        top: 150px;
+   
+    }
+
+    .about_img img{
+        height: 250px;
+        width: 250px;
+        border-radius: 125px;
+    }
+    
+    .profile_p_wrapper{
+        /*background: rgba(0,0,0,0.2);*/
+        position: absolute;
+        height: auto;
+        width: 240px;
+        top: 450px;
+
+    }
+    
+    .about_p{
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+    
+    #skill_wrapper{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        height: 700px;
+        background: rgba(255,255,255,1);
+    }
+    
+    #skill_icon_wrapper{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: 70px;
+        left: 50%;
+        transform: translate(-49%,0);
+    }
+    
+    #skill_icon_wrapper table{
+        position: absolute;
+        height: 150px;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .fab{
+        font-size: 10vw;
+        width: 10vw;
+    }
+    
+    .skill_icon{
+        padding-left: 5px;
+    }
+    
+    .fa-html5::after{
+        content: "HTML";
+        font-size: 2vw;
+        font-weight: bold;
+        position: absolute;
+        top: 110px;
+        left: 3%;
+    }
+    
+    .fa-css3-alt::after{
+        content: "CSS";
+        font-size: 2vw;
+        font-weight: bold;
+        position: absolute;
+        top: 110px;
+        left: 17%;
+    }
+    
+    .fa-js-square::after{
+        content: "JavaScript";
+        font-size: 2vw;
+        font-weight: bold;
+        position: absolute;
+        top: 110px;
+        left: 27.5%;
+    }
+    
+    #jquery_icon_img{
+        padding-left: 10px;
+    }
+    
+    #jquery_text{
+        font-size: 2vw;
+        font-weight: bold;
+        font-family: "Font Awesome 5 Brands";
+        position: absolute;
+        top: 108px;
+        left: 45%;
+    }
+    
+    #php_icon_img{
+        padding-left: 10px;
+    }
+    
+    .fa-php::after{
+        content: "PHP";
+        font-size: 2vw;
+        font-weight: 700;
+        position: absolute;
+        top: 110px;
+        left: 63%;
+    }
+    
+    #mysql_icon_img{
+        padding-left: 15px;
+    }
+    
+    #mysql_text{
+        font-size: 2vw;
+        font-weight: bold;
+        font-family: "Font Awesome 5 Brands";
+        position: absolute;
+        top: 108px;
+        left: 76.5%;
+    }
+    
+    #git_text{
+        font-size: 2vw;
+        font-weight: bold;
+        font-family: "Font Awesome 5 Brands";
+        position: absolute;
+        top: 108px;
+        left: 91.5%;
+    }
+    
+    #skill_p{
+        width: 80vw;
+        font-size: 14px;
+        font-weight: 300;
+        position: absolute;
+        top: 370px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+    
+    #works{
+        height: 1500px;
+        position: relative;
+    }
+    
+    
+    #works_wrapper{
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 300px;
+        height: 1500px;
+    }
+    
+    #works1{
+        position: absolute;
+        top: 50px;
+    }
+    
+    #works2{
+        position: absolute;
+        top: 650px;
+    }
+    
+    .works_img{
+        width: 300px;
+        height: 165px;
+        object-fit: cover;
+        object-position: 50% 0%;
+        transition: 1s;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    .works_hover{
+        position: absolute;
+        width: 300px;
+        height: 165px;
+        border-radius: 5px 5px 0 0;
+        background-color: #a1e6a1;
+        opacity: 0.92;
+        z-index: 15;
+        display: none;
+    }
+    
+    .zoom_icon {
+	    display: inline-block;
+	    width: 50px;
+	    height: 50px;
+	    font-size: 50px;
+	    position: relative;
+	    cursor: pointer;
+        top: 50%;
+        left: 50%;
+        transform: translate(-55%,-55%);
+    }
+    
+    .zoom_icon span {
+	    position: absolute;
+	    display: block;
+	    top: 50%;
+	    left: 50%;
+	    width: 56%;
+	    height: 56%;
+	    border-radius: 50%;
+	    margin: -.28em 0 0 -.28em;
+	    border: .12em solid #fff;
+    }
+    
+    .zoom_icon span::after {
+	    position: absolute;
+	    display: block;
+	    content: "";
+	    top: 50%;
+	    left: 50%;
+	    width: 72%;
+	    height: 36%;
+	    background: #fff;
+	    margin: .2em 0 0 .14em;
+	    transform: rotate(45deg);
+    }
+
+    .works_caption{
+        background: rgba(255,255,255,1);
+        width: 300px;
+        height: 170px;
+        position: relative;
+        top: -7px;
+        text-align: center;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    .caption{
+        position: absolute;
+        font-size: 20px;
+        width: 100%;
+        top: 20px;
+        font-weight: 600;
+    }
+    
+    .works_caption p{
+        position: absolute;
+        font-size: 13px;
+        width: 100%;
+        font-weight: 200;
+        bottom: 5px;
+        
+    }
+    
+    .js_modal{
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 200;
+        overflow-y:scroll;
+        display: none;
+    }
+    
+    .modal_bg{
+        background: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    
+    .modal_content{
+        background: #fff;
+        height: 95%;
+        width: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        margin: 10px 0px;
+        position: absolute;
+        overflow-y:scroll;
+        border-radius: 5px;
+    }
+    
+    .close_wrapper{
+        position: relative;
+        top:30px;
+        left: 77%;
+        width: 70px;
+        cursor: pointer;
+    }
+    
+    .close{
+        display: block;
+        width: 70px;/*枠の大きさ*/
+        height: 70px;/*枠の大きさ*/
+        position: relative;
+    }
+
+    .close::before, .close::after{
+        content: "";
+        display: block;
+        width: 100%;/*バツ線の長さ*/
+        height: 1px;/*バツ線の太さ*/
+        background: #000;
+        transform: rotate(45deg);
+        transform-origin:0% 50%;
+        position: absolute;
+        top: calc(14% - 5px);
+        left: 14%;
+    }
+
+    .close::after{
+        transform: rotate(-45deg);
+        transform-origin:100% 50%;
+        left: auto;
+        right: 14%;
+    }
+    
+    .modal_content img{
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        position: relative;
+        top: 50px;
+    }
+    
+    .modal_caption{
+        position: relative;
+        width: 70vw;
+        top: 90px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        text-align: center;
+        font-weight: 200;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    
+    .close_button{
+        position: relative;
+        top: 140px;
+        left: 50%;
+        width: 60px;
+        transform: translate(-50%, 0%);
+        background: #000;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 35px;
+        border-radius: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .close_button:hover{
+        background: rgba(0,0,0,0.7);
+    }
+    
+    .space{
+        position: relative;
+        top: 160px;
+        left: 50%;
+        margin: 50px 0px;
+        transform: translate(-50%, 0%);
+        padding: 10px 1px;
+    }
+
+    #contact{
+        height: 800px;
+        position: relative;
+        background-color: #fff;
+    }
+    
+    #contact_form{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+        z-index: 5;
+    }
+    
+     input,textarea{
+        border-radius: 5px;
+        padding: 15px 10px 15px 10px;
+        border: 1px solid #cecece;
+        background: #ffffff;
+        color:#333;
+        width: 230px;
+        font-size: 15px;
+    }
+    
+    textarea{
+        max-width: 230px;
+        padding-bottom: 50px;
+    }
+    
+    input,textarea,button{
+        margin: 12px ;
+    }
+    
+    input::placeholder,textarea::placeholder{
+        color: #cfcfcf;
+        font-size: 15px;
+    }
+    
+    button{
+        background-color:#a1e6a1;
+        padding: 12px 45px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #a1e6a1;
+        -webkit-transition: .5s;
+        transition: 0.5s;
+        display: inline-block;
+        cursor: pointer;
+        width: 200px;
+        color:#fff;
+        font-size: 17px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    
+    button:hover{
+        background-color: #8fcc8f;
+    }
+    
+    footer{
+        position: relative;
+        background: #a1e6a1;
+        height: 100px;
+        text-align: center;
+    }
+    
+    #copyright{
+        color: #fff;
+        position: relative;
+        top: 50%;
+        transform: translate(0%,-50%);
+       
+    }
+    
+}
